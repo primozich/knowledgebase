@@ -8,7 +8,7 @@ const TYPE_LABELS: Record<string, { label: string; color: string }> = {
   podcast: { label: "Podcast", color: "bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300" },
 };
 
-export default function ReferenceCard({ ref: r }: { ref: Reference }) {
+export default function ReferenceCard({ reference: r }: { reference: Reference }) {
   const badge = TYPE_LABELS[r.type] ?? TYPE_LABELS.webpage;
   const domain = (() => { try { return new URL(r.url).hostname.replace(/^www\./, ""); } catch { return r.url; } })();
 

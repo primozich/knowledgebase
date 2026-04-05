@@ -65,7 +65,7 @@ export default async function Home({
       ) : (
         <div className="space-y-3">
           {rows.map((r) => (
-            <ReferenceCard key={r.id} ref={r} />
+            <ReferenceCard key={r.id} reference={r} />
           ))}
         </div>
       )}
